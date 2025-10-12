@@ -8,13 +8,17 @@ fun main() {
 
     for (i in string) {
         if (i.toString() !in specialCharactersList) {
-            wordLength += 1
+            wordLength++
             } else {
-                if (wordLength !== 0.0) {
+                if (wordLength != 0.0) {
                     lengthList.add(wordLength)
                 }
                 wordLength = 0.0
             }
+    }
+
+    if (wordLength != 0.0) {
+        lengthList.add(wordLength)
     }
 
     val result: Double = lengthList.sum() / lengthList.count()
