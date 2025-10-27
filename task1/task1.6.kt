@@ -9,8 +9,8 @@ fun main() {
     val result: MutableList<String> = mutableListOf()
     val conversation = File("text.txt").readText()
     val patterns = mutableListOf(
-    "\\+[1-9][1-9][1-9] \\([1-9][1-9]\\) [1-9][1-9][1-9]-[1-9][1-9][1-9][1-9]".toRegex(RegexOption.IGNORE_CASE),
-    "(\\+|)[1-9] \\([1-9][1-9][1-9]\\) [1-9][1-9][1-9]-[1-9][1-9]-[1-9][1-9]".toRegex(RegexOption.IGNORE_CASE)
+    "\\+[1-9][1-9][1-9] \\([1-9][1-9]\\) [1-9][1-9][1-9]-[1-9][1-9][1-9][1-9]".toRegex(),
+    "(\\+|)[1-9] \\([1-9][1-9][1-9]\\) [1-9][1-9][1-9]-[1-9][1-9]-[1-9][1-9]".toRegex()
     )
 
     println(conversation)
