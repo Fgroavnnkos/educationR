@@ -3,7 +3,7 @@ fun main() {
     val firstString = "omg i love shrek"
     val secondString = "o kek"
 
-    var uniqueSecondStrings: MutableSet<Char> = mutableSetOf()
+    var uniqueSecondChars: MutableSet<Char> = mutableSetOf()
     var firstStringList: MutableList<String> = mutableListOf()
 
     for (i in secondString) {
