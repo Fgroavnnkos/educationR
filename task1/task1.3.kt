@@ -3,12 +3,12 @@ fun main() {
     val firstString = "omg i love shrek"
     val secondString = "o kek"
 
-    var uniqueSecondChars: MutableSet<Char> = mutableSetOf()
-    var firstStringList: MutableList<String> = mutableListOf()
+    val uniqueSecondChars: MutableSet<Char> = mutableSetOf()
+    val firstStringList: MutableList<String> = mutableListOf()
 
     for (i in secondString) {
-        if (i.toString() != " ") {
-            uniqueSecondStrings.add(i)
+        if (i != ' ') {
+            uniqueSecondChars.add(i)
             println(i)
         }
     }
@@ -17,7 +17,7 @@ fun main() {
         firstStringList.add(i.toString())
     }
 
-    for (char in uniqueSecondStrings) {
+    for (char in uniqueSecondChars) {
         for (i in 0..firstString.count() - 1) {
             if (firstStringList[i] == char.toString()) {
                 firstStringList[i] = char.toString() + char.toString()
@@ -25,7 +25,7 @@ fun main() {
         }
     }
     println(firstString)
-    println(uniqueSecondStrings.joinToString(""))
+    println(uniqueSecondChars.joinToString(""))
     println(firstStringList.joinToString(""))
 
 

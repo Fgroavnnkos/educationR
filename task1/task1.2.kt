@@ -3,7 +3,7 @@ fun main() {
     val string = " slovo, skdsdsks sdsaowq! Cogito, Ergo Sum."
     val specialCharactersList = listOf(" ", "!", "?", ",", ".", "(", ")")
 
-    var wordLength: Double = 0.0
+    var wordLength = 0.0
     var lengthList = mutableListOf<Double>()
 
     for (i in string) {
