@@ -8,13 +8,12 @@ class Student(var mail: String = "", name: String = "", surname: String = "") {
     
 init
 {
-    require(mail.isNotBlank() or ( name.isNotBlank() and surname.isNotBlank())) {"you have to input mail or name and surname or all of that"}
+    require(mail.isNotBlank() or ( name.isNotBlank() and surname.isNotBlank())) {"object is not created, you have to input mail or name and surname or all of that"}
      
     if (mail.isNotBlank() and (mail.split("@")[0].length >= 2) and regex.matches(mail)) mailIsCorrect = true
 
     if (name.isNotBlank() and surname.isNotBlank())
     {
-
         val fullName = "$name.$surname"
 
         if (mailIsCorrect)
@@ -24,12 +23,10 @@ init
 
         println("built mail is $mail built fullName is $fullName")
 
-
     } else if (mailIsCorrect)
     {
         val fullName = mail.split("@")[0]
         println("of all the input, only mail is correct. mail is $mail fullName is $fullName")
-
     }
 }
 
