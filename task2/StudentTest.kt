@@ -9,8 +9,9 @@ class StudentTest {
     fun equalsTest()
     {
         val student1 = Student("ivan.gorodTver@gmail.com")
-        val student2  = Student("", "ivan", "gorodTver")
-        val student3  = Student("sahdsahdusahdopsahdposajpid", "Almod", "Croissant64")
+        val student2 = Student("", "ivan", "gorodTver")
+        val student3 = Student("sahdsahdusahdopsahdposajpid", "Almod", "Croissant64")
+        val student4 = Student("123@mail.ru", "Almod", "Croissant64")
 
         val result12 = student1.equals(student2)
         val result13 = student1.equals(student3)
@@ -24,9 +25,9 @@ class StudentTest {
     @Test
     fun hashCodeTest()
     {
-        val student1  = Student("ivan.gorodTver@gmail.com")
-        val student2  = Student("", "ivan", "gorodTver")
-        val student3  = Student("sadsadasdsad", "", "Croissant64")
+        val student1 = Student("ivan.gorodTver@gmail.com")
+        val student2 = Student("", "ivan", "gorodTver")
+        val student3 = Student("sadsadasdsad", "", "Croissant64")
 
         val result12 = (student1.hashCode() == student2.hashCode())
         val result13 = (student1.hashCode() == student3.hashCode())
